@@ -37,7 +37,7 @@ const gridHelper = new THREE.GridHelper(200,50);
 scene.add(lightHelper,gridHelper);
 
 
-const josephTexture = new THREE.TextureLoader().load('./assets/images/Joseph.jpg');
+const josephTexture = new THREE.TextureLoader().load('Joseph.jpg');
 
 const joseph = new THREE.Mesh(
   new THREE.BoxGeometry(7,7,7),
@@ -51,7 +51,7 @@ let textMesh;
 
 const loader = new FontLoader();
 
-loader.load( './assets/fonts/Roboto_Bold.json', function ( font ) {
+loader.load( 'Roboto_Bold.json', function ( font ) {
 
   const textGeometry = new TextGeometry( text, {
     font: font,
@@ -65,7 +65,7 @@ loader.load( './assets/fonts/Roboto_Bold.json', function ( font ) {
     bevelSegments: 1
   } );
 
-  const codeTexture = new THREE.TextureLoader().load('./assets/images/code.jpg');
+  const codeTexture = new THREE.TextureLoader().load('code.jpg');
 
 	codeTexture.wrapS = codeTexture.wrapT = THREE.RepeatWrapping;
 	codeTexture.repeat.set( 0.05, 0.05 );
