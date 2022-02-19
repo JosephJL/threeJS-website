@@ -3,6 +3,11 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls' ; 
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
+import josephUrl from './assets/images/Joseph.jpg'
+import codeUrl from './assets/images/code.jpg'
+
+const codeImg = codeUrl
+const josephImg = josephUrl
 
 const scene = new THREE.Scene();
 
@@ -37,7 +42,7 @@ const gridHelper = new THREE.GridHelper(200,50);
 scene.add(lightHelper,gridHelper);
 
 
-const josephTexture = new THREE.TextureLoader().load('Joseph.jpg');
+const josephTexture = new THREE.TextureLoader().load(josephImg);
 
 const joseph = new THREE.Mesh(
   new THREE.BoxGeometry(7,7,7),
@@ -65,7 +70,7 @@ loader.load( 'Roboto_Bold.json', function ( font ) {
     bevelSegments: 1
   } );
 
-  const codeTexture = new THREE.TextureLoader().load('code.jpg');
+  const codeTexture = new THREE.TextureLoader().load(codeImg);
 
 	codeTexture.wrapS = codeTexture.wrapT = THREE.RepeatWrapping;
 	codeTexture.repeat.set( 0.05, 0.05 );
